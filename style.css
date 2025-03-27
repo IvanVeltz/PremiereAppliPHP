@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    width: 100%;
+    text-align: center;
+    margin: 2em;
+}
+
+form{
+    width: 100%;
+    text-align: center;
+    
+}
+form .formulaire{
+    display: flex;
+    flex-direction: column;
+}
+
+label, .submit{
+    margin: 1em;
+}
