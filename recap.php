@@ -43,15 +43,17 @@ session_start()
                 "<td>".$index."</td>",
                 "<td>".$product['name']."</td>",
                 "<td>".number_format($product['price'], 2, ",", "&nbsp;")."&nbsp;€</td>",
-                "<td class='actions'>",
+                "<td class='actions'>";
                     // Ajout du bouton "-"
-                    "<form method='post' action='traitement.php?action=down-qtt'>
-                        <input type='hidden' name='minus' value='$index'></input>
-                        <button type='submit'>-</button>
-                    </form>",
-                    $product['qtt'],
+                    if ($product['qtt'] != 0){
+                        echo "<form class= 'minus' method='post' action='traitement.php?action=down-qtt'>
+                            <input type='hidden' name='minus' value='$index'></input>
+                            <button type='submit'>-</button>
+                        </form>";
+                    }
+                    echo "<span class='produit'>".$product['qtt']."</span>",
                     // Ajout du bouton "+"
-                    "<form method='post' action='traitement.php?action=up-qtt'>
+                    "<form class='plus' method='post' action='traitement.php?action=up-qtt'>
                         <input type='hidden' name='plus' value='$index'></input>
                         <button type='submit'>+</button>
                     </form>",

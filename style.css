@@ -73,4 +73,6 @@ table .total{
 
 table .actions{
     display:flex;
+    position: relative;
 }
+
