@@ -55,8 +55,27 @@ form .formulaire{
     flex-direction: column;
 }
 
+.input-prix, .input-qtt{
+    text-align: right;
+    width: 50%;
+    margin: auto;
+    min-width: 150px;
+}
+
+.input-product{
+    text-align: left;
+    width: 50%;
+    margin: auto;
+    min-width: 150px;
+}
+
 label, .submit{
     margin: 1em;
+}
+
+label{
+    display: flex;
+    flex-direction: column;
 }
 
 .submit{
@@ -118,6 +137,10 @@ table thead th, table tr:last-child td{
 
 table tbody td{
     border-bottom: 1px solid #1c4472;
+}
+
+table tbody tr:hover{
+    background-color: #AEC9E5;
 }
 
 

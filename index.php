@@ -13,22 +13,22 @@
     </header>
     <main>
         <form class="form-ajout" action="traitement.php?action=add" method="post">
-            <p class="formulaire">
+            <div class="formulaire">
                 <label>
-                    Nom du produit :
-                    <input type="text" name="name">
+                   <p>Nom du produit :</p>
+                    <input class="input-product" type="text" name="name">
                 </label>
 
                 <label>
-                    Prix du produit :
-                    <input type="number" step="any" name="price">
+                    <p>Prix du produit :</p>
+                    <input class="input-prix" type="number" step="any" name="price">
                 </label>
 
                 <label>
-                    Quantité désirée :
-                    <input type="number" name="qtt" value="1">
+                    <p>Quantité désirée :</p>
+                    <input class="input-qtt"type="number" name="qtt" value="1">
                 </label>
-            </p>
+            </div>
             <p>
                 <input type="submit" name="submit" value="Ajouter" class="submit">
             </p>
