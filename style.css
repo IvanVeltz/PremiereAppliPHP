@@ -65,8 +65,12 @@ table .total{
     text-align: right;
 }
 
-.qtt{
+.qtt, .ajout, .aucun, .delete{
     display: block;
     text-align: center;
     margin: 1em;
+}
+
+table .actions{
+    display:flex;
 }

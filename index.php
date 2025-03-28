@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,12 +14,12 @@
     <header>
         <h1>Ajouter un produit</h1>
         <nav>
-            <a href="index.html">Accueil</a>
+            <a href="index.php">Accueil</a>
             <a href="recap.php">Liste des produits</a>
         </nav>
     </header>
     <main>
-        <form action="traitement.php" method="post">
+        <form action="traitement.php?action=add" method="post">
             <p class="formulaire">
                 <label>
                     Nom du produit :
@@ -37,7 +41,25 @@
             </p>
         </form>
 
+        <?php
+        $totalProduit = 0;
+        if (isset($_SESSION['products'])){
+            foreach($_SESSION['products'] as $index => $product){
+                $totalProduit += $product['qtt'];
+            }
+        }
+        echo "<p class='qtt'>Nombre de produits dipsonibles : ",
+        $totalProduit,
+        " produits.</p>";
         
+        if (isset($_SESSION['messageAjout'])){
+            echo "<p class = 'ajout'>" . $_SESSION['messageAjout'] . "</p>";
+            unset($_SESSION['messageAjout']); // Supprime le message après l'affichage
+        
+        }
+        ?>
+
+
             
     </main>
     
