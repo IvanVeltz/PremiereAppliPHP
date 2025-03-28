@@ -63,7 +63,7 @@ if (isset($_GET['action'])){
             
             if (isset($_POST['plus'])) {
                 $index = intval($_POST['plus']); // Récupére l'index du produit
-                // Ajoute une quantité à l'article
+                // Ajoute une quantité à l'article et ajustement du prix total de l'article
                 if (isset($_SESSION['products'][$index])) {
                     $_SESSION['products'][$index]['qtt'] += 1;
                     $_SESSION['products'][$index]['total'] += $_SESSION['products'][$index]['price'];
@@ -76,7 +76,7 @@ if (isset($_GET['action'])){
         case "down-qtt":
             if (isset($_POST['minus'])) {
                 $index = intval($_POST['minus']); // Récupére l'index du produit
-                // Retirer une quantité à l'article
+                // Retirer une quantité à l'article et ajustement du prix total de l'article
                 if (isset($_SESSION['products'][$index]) && ($_SESSION['products'][$index]['qtt'] > 0)) {
                     $_SESSION['products'][$index]['qtt'] -= 1;
                     $_SESSION['products'][$index]['total'] -= $_SESSION['products'][$index]['price'];
