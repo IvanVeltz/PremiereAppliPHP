@@ -12,7 +12,7 @@
         <h1>Ajouter un produit</h1>
     </header>
     <main>
-        <form action="traitement.php?action=add" method="post">
+        <form class="form-ajout" action="traitement.php?action=add" method="post">
             <p class="formulaire">
                 <label>
                     Nom du produit :

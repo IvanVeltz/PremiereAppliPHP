@@ -119,3 +119,12 @@ table thead th, table tr:last-child td{
 table tbody td{
     border-bottom: 1px solid #1c4472;
 }
+
+
+.form-ajout{
+    width: 50%;
+    color: #1c4472;
+    background-color: #AEC9E5;
+    margin: auto;
+    border-radius: 15px;
+}
