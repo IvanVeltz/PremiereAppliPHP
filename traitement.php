@@ -101,4 +101,4 @@ if (isset($_GET['action'])){
 
 // faille XSS Une faille de sécurité coté client qui permet à un utilisateur malveilllant d'injecter du code
 
-// superglobale Une varibale prédefini en PHP, utilisable à n'importe quel endroit?
+// superglobale Une varibale prédefini en PHP, utilisable à n'importe quel endroit dans le script

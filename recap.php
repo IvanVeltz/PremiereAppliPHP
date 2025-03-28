@@ -39,14 +39,14 @@ ob_start();
                     // Ajout du bouton "-"
                     if ($product['qtt'] != 0){
                         echo "<form class= 'minus' method='post' action='traitement.php?action=down-qtt'>
-                            <input type='hidden' name='minus' value='$index'></input>
+                            <input type='hidden' name='minus' value='".filter_var($index, FILTER_VALIDATE_INT)."'></input>
                             <button type='submit'>-</button>
                         </form>";
                     }
                     echo "<span class='produit'>".$product['qtt']."</span>",
                     // Ajout du bouton "+"
                     "<form class='plus' method='post' action='traitement.php?action=up-qtt'>
-                        <input type='hidden' name='plus' value='$index'></input>
+                        <input type='hidden' name='plus' value='".filter_var($index, FILTER_VALIDATE_INT)."'></input>
                         <button type='submit'>+</button>
                     </form>",
                 "</td>",
@@ -54,7 +54,7 @@ ob_start();
                 "<td>",
                 // Ajout du bouton pour supprimer
                     "<form method='post' action='traitement.php?action=delete'>
-                        <input type='hidden' name='index' value='$index'></input>
+                        <input type='hidden' name='index' value='".filter_var($index, FILTER_VALIDATE_INT)."'></input>
                         <button type='submit'>Supprimer</button>
                     </form>",
                 
