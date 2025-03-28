@@ -1,16 +1,8 @@
 <?php
-session_start()
+session_start();
+ob_start();
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Récapitulatif des produits</title>
-</head>
-<body>
     <header>
         <h1>Liste des produit</h1>
         <nav>
@@ -98,5 +90,9 @@ session_start()
         }
         ?>
     </main>
-</body>
-</html>
+
+<?php 
+
+$title = "Liste des produits";
+$content = ob_get_clean();
+require_once "template.php";

@@ -1,16 +1,9 @@
 <?php
     session_start();
+    ob_start();
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Ajout produit</title>
-</head>
-<body>
+
     <header>
         <h1>Ajouter un produit</h1>
         <nav>
@@ -63,5 +56,8 @@
             
     </main>
     
-</body>
-</html>
+<?php
+
+$title = "Ajouter un produit";
+$content = ob_get_clean();
+require_once "template.php";
