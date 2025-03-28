@@ -4,11 +4,11 @@ ob_start();
 ?>
 
     <header>
-        <h1>Liste des produit</h1>
         <nav>
             <a href="index.php">Accueil</a>
             <a href="recap.php">Liste des produits</a>
         </nav>
+        <h1>Liste des produit</h1>
     </header>
     <main>
         <?php
@@ -38,16 +38,16 @@ ob_start();
                 "<td class='actions'>";
                     // Ajout du bouton "-"
                     if ($product['qtt'] != 0){
-                        echo "<form class= 'minus' method='post' action='traitement.php?action=down-qtt'>
+                        echo "<form  method='post' action='traitement.php?action=down-qtt'>
                             <input type='hidden' name='minus' value='".filter_var($index, FILTER_VALIDATE_INT)."'></input>
-                            <button type='submit'>-</button>
+                            <button class= 'minus' type='submit'>-</button>
                         </form>";
                     }
                     echo "<span class='produit'>".$product['qtt']."</span>",
                     // Ajout du bouton "+"
-                    "<form class='plus' method='post' action='traitement.php?action=up-qtt'>
+                    "<form  method='post' action='traitement.php?action=up-qtt'>
                         <input type='hidden' name='plus' value='".filter_var($index, FILTER_VALIDATE_INT)."'></input>
-                        <button type='submit'>+</button>
+                        <button class='plus' type='submit'>+</button>
                     </form>",
                 "</td>",
                 "<td>".number_format($product['total'], 2, ",", "&nbsp;")."&nbsp;€</td>",
@@ -55,7 +55,7 @@ ob_start();
                 // Ajout du bouton pour supprimer
                     "<form method='post' action='traitement.php?action=delete'>
                         <input type='hidden' name='index' value='".filter_var($index, FILTER_VALIDATE_INT)."'></input>
-                        <button type='submit'>Supprimer</button>
+                        <button type='submit' class='submit'>Supprimer</button>
                     </form>",
                 
                 "</td></tr>";
@@ -68,7 +68,7 @@ ob_start();
                 "<td>
                     <form method='post' action='traitement.php?action=clear'>
                         <input type='hidden' name='delete_all' value='1'></input>
-                        <button type='submit'>Tous supprimer</button>
+                        <button type='submit' class='submit'>Tous supprimer</button>
                     </form>
                 </td></tr>",
             "</tr>",  

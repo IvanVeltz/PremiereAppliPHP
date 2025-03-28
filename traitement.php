@@ -99,6 +99,6 @@ if (isset($_GET['action'])){
  
 // session start Ca créer une session, ou reprend la session en cours si elle existe déjà
 
-// faille XSS Une faille de sécurité coté client qui permet à un utilisateur malveilllant d'injecter du code
+// faille XSS Une faille de sécurité coté client qui permet à un utilisateur malveilllant d'injecter du code, danger ? Hameconnage, recuperation de cookies
 
 // superglobale Une varibale prédefini en PHP, utilisable à n'importe quel endroit dans le script

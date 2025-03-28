@@ -5,11 +5,11 @@
 
 
     <header>
-        <h1>Ajouter un produit</h1>
         <nav>
             <a href="index.php">Accueil</a>
             <a href="recap.php">Liste des produits</a>
         </nav>
+        <h1>Ajouter un produit</h1>
     </header>
     <main>
         <form action="traitement.php?action=add" method="post">
@@ -30,7 +30,7 @@
                 </label>
             </p>
             <p>
-                <input type="submit" name="submit" value="Ajouter le produit" class="submit">
+                <input type="submit" name="submit" value="Ajouter" class="submit">
             </p>
         </form>
 
