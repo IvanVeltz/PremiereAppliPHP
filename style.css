@@ -8,10 +8,28 @@ body{
     flex-direction: column;
 }
 
-h1{
-    width: 100%;
+header{
+    width: 50%;
+    margin: auto;
     text-align: center;
-    margin: 2em;
+}
+
+header nav a{
+    text-decoration: none;
+    color: black;
+    padding: 1em;
+    font-size: large;
+}
+
+header nav a:hover{
+    color: rgba(255, 0, 0, 0.531);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+h1{
+    text-align: center;
+    margin: 1em;
 }
 
 form{
@@ -25,5 +43,30 @@ form .formulaire{
 }
 
 label, .submit{
+    margin: 1em;
+}
+
+table{
+    width: 50%;
+    max-width: 600px;
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: 1em;
+}
+
+table td, table th{
+    text-align: center;
+    padding: 0.3em;
+    border: solid 1px black;
+}
+
+table .total{
+    font-weight: bold;
+    text-align: right;
+}
+
+.qtt{
+    display: block;
+    text-align: center;
     margin: 1em;
 }

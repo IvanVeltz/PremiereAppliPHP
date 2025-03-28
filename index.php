@@ -9,6 +9,10 @@
 <body>
     <header>
         <h1>Ajouter un produit</h1>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="recap.php">Liste des produits</a>
+        </nav>
     </header>
     <main>
         <form action="traitement.php" method="post">
@@ -32,6 +36,9 @@
                 <input type="submit" name="submit" value="Ajouter le produit" class="submit">
             </p>
         </form>
+
+        
+            
     </main>
     
 </body>
