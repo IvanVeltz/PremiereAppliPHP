@@ -5,8 +5,7 @@ ob_start();
 
     <header>
         <nav>
-            <a href="index.php">Accueil</a>
-            <a href="recap.php">Liste des produits</a>
+            <a href="index.php" class="link"><i class="fa-solid fa-house"></i><p>Accueil</p></a>
         </nav>
         <h1>Liste des produit</h1>
     </header>

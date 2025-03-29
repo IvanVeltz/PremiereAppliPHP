@@ -5,9 +5,11 @@
 
 
     <header>
-        <nav>
-            <a href="index.php">Accueil</a>
-            <a href="recap.php">Liste des produits</a>
+        <nav class="accueil">
+            <a href="recap.php" class="linkPanier">
+                <p>Voir mon panier</p>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
         </nav>
         <h1>Ajouter un produit</h1>
     </header>

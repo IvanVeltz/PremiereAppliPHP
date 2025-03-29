@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -6,8 +7,9 @@
 }
 
 body {
-    background-color: #AEC9E5;
-    color: #134173;
+    background-image: url(backgroundFruits.jpg);
+    background-size: cover;
+    color: #6ABD00;
 }
 
 #wrapper {
@@ -24,15 +26,34 @@ header, h1 {
     margin: 1em;
 }
 
+header{
+    display: flex;
+    flex-direction: column;
+}
+
 nav {
     margin: 1em;
 }
 
+.link{
+    display: flex;
+    align-items: center;
+}
+
+.linkPanier{
+    display: flex;
+}
+
+.accueil{
+    
+    align-self: flex-end;
+}
+
 header nav a {
     text-decoration: none;
-    padding: 1em;
     font-size: large;
-    color: #134173;
+    color: #6ABD00;
+    
 }
 
 header nav a:hover {
@@ -75,7 +96,7 @@ label {
 
 .submit {
     color: #fff;
-    background-color: #1c4472;
+    background-color: #6ABD00;
     padding: 0.5em;
     border-radius: 8px;
     cursor: pointer;
@@ -92,7 +113,7 @@ table {
 table td, table th {
     text-align: center;
     padding: 0.3em;
-    border-bottom: 1px solid #1c4472;
+    border-bottom: 1px solid #6ABD00;
 }
 
 table td {
@@ -100,7 +121,7 @@ table td {
 }
 
 table thead th, table tr:last-child td {
-    border-bottom: 2px solid #1c4472;
+    border-bottom: 2px solid #6ABD00;
 }
 
 table .total {
@@ -109,7 +130,7 @@ table .total {
 }
 
 table tbody tr:hover {
-    background-color: #AEC9E5;
+    background-color: #000000;
 }
 
 .qtt, .ajout, .aucun, .delete {
@@ -126,7 +147,7 @@ table .actions {
 
 .minus, .plus {
     background-color: #fff;
-    color: #1c4472;
+    color: #6ABD00;
     border-radius: 8px;
     cursor: pointer;
     margin: 0 0.5em;
@@ -135,8 +156,8 @@ table .actions {
 
 .form-ajout {
     width: 50%;
-    color: #1c4472;
-    background-color: #AEC9E5;
+    color: #6ABD00;
+    background-color: #000000;
     margin: auto;
     border-radius: 15px;
 }
