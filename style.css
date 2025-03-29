@@ -2,15 +2,15 @@
     margin: 0;
     padding: 0;
     font-family: "Funnel Sans", sans-serif;
+    box-sizing: border-box;
 }
 
-body{
+body {
     background-color: #AEC9E5;
     color: #134173;
-    
 }
 
-#wrapper{
+#wrapper {
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -19,66 +19,61 @@ body{
     background-color: white;
 }
 
-header{
+header, h1 {
     text-align: center;
-}
-
-nav{
     margin: 1em;
 }
 
-header nav a{
+nav {
+    margin: 1em;
+}
+
+header nav a {
     text-decoration: none;
     padding: 1em;
     font-size: large;
-    
     color: #134173;
 }
 
-header nav a:hover{
+header nav a:hover {
     font-weight: bold;
     text-decoration: underline;
 }
 
-h1{
-    text-align: center;
-    margin: 1em;
-}
-
-form{
+form {
     width: 100%;
     text-align: center;
-    
 }
-form .formulaire{
+
+form .formulaire {
     display: flex;
     flex-direction: column;
 }
 
-.input-prix, .input-qtt{
+.input-prix, .input-qtt, .input-product {
+    width: 50%;
+    margin: auto;
+    min-width: 150px;
+}
+
+.input-prix, .input-qtt {
     text-align: right;
-    width: 50%;
-    margin: auto;
-    min-width: 150px;
 }
 
-.input-product{
+.input-product {
     text-align: left;
-    width: 50%;
-    margin: auto;
-    min-width: 150px;
 }
 
-label, .submit{
+label, .submit {
     margin: 1em;
 }
 
-label{
+label {
     display: flex;
     flex-direction: column;
 }
 
-.submit{
+.submit {
     color: #fff;
     background-color: #1c4472;
     padding: 0.5em;
@@ -86,65 +81,59 @@ label{
     cursor: pointer;
 }
 
-table{
+table {
     width: 50%;
     max-width: 600px;
     margin: auto;
     margin-top: 1em;
-    
     border-collapse: collapse;
 }
 
-table td, table th{
+table td, table th {
     text-align: center;
     padding: 0.3em;
+    border-bottom: 1px solid #1c4472;
 }
 
-table td{
+table td {
     height: 80px;
 }
 
-table .total{
+table thead th, table tr:last-child td {
+    border-bottom: 2px solid #1c4472;
+}
+
+table .total {
     font-weight: bold;
     text-align: right;
 }
 
-.qtt, .ajout, .aucun, .delete{
+table tbody tr:hover {
+    background-color: #AEC9E5;
+}
+
+.qtt, .ajout, .aucun, .delete {
     display: block;
     text-align: center;
     margin: 1em;
 }
 
-table .actions{
-    display:flex;
-    position: relative;
+table .actions {
+    display: flex;
     align-items: center;
-    vertical-align: center;
+    margin: auto;
 }
 
-.minus, .plus{
+.minus, .plus {
     background-color: #fff;
     color: #1c4472;
     border-radius: 8px;
     cursor: pointer;
-    margin : 0 0.5em;
+    margin: 0 0.5em;
     padding: 0.5em;
 }
 
-table thead th, table tr:last-child td{
-    border-bottom: 2px solid #1c4472;
-}
-
-table tbody td{
-    border-bottom: 1px solid #1c4472;
-}
-
-table tbody tr:hover{
-    background-color: #AEC9E5;
-}
-
-
-.form-ajout{
+.form-ajout {
     width: 50%;
     color: #1c4472;
     background-color: #AEC9E5;
