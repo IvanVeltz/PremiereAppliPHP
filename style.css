@@ -42,6 +42,7 @@ nav {
 
 .linkPanier{
     display: flex;
+    align-items: center;
 }
 
 .accueil{
